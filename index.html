@@ -40,93 +40,107 @@
     </nav>
 
     <section>
-      <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
+      <h2>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig!</h2>
     </section>
 
-        <aside>
-          <section>
-            <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
-            <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
-              <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
-            </p>
-            <p class="status-ok">Tilgjengelig</p>
-            <p class="status-bad">Utilgjengelig</p>
-          </section>
+    <aside>
+      <section>
+        <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
+        <p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
+          <a class="tiny-link" href="#">Klikk her</a> for å lese mer om ting.
+        </p>
+        <p class="status-ok">Tilgjengelig</p>
+        <p class="status-bad">Utilgjengelig</p>
+      </section>
 
-          <section>
-            <h4>Språk</h4>
-            <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
-            </p>
-          </section>
-        </aside>
+      <section>
+        <h4>Språk</h4>
+        <p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
+        </p>
+      </section>
+    </aside>
 
-        <main>
-          <h1>
-            VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)
-          </h1>
+      <main>
+        <h1>
+          VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)
+        </h1>
 
-          <section>
-            <h2>Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.</h2>
+        <section>
+          <h2>Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.</h2>
 
-          <div class="card form">
-            <h4>Kontakt oss</h4>
-            <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
-            <input type="text" id="navn" placeholder="Navn*">
-            <input type="email" id="navn" placeholder="E-post*"> <!-- bevisst: duplisert id -->
-            <input type="tel" placeholder="Telefon">
-            <select>
-              <option>Velg tema*</option>
-              <option>Bestilling</option>
-              <option>Support</option>
-            </select>
+        <div class="card form">
+          <h4>Kontakt oss</h4>
+          <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
+          <form>
+            <label>Navn:
+              <input type="text" id="navn" placeholder="Kari Nordmann..." required>
+            </label>
+            <label>E-post:
+              <input type="email" id="email" placeholder="karinordmann@hiof.no..." required>
+            </label>
+            <label>Telefon nr:
+              <input type="tel" placeholder="401 78 567">
+            </label>
+
+            <label for="service">Tjeneste</label>
+          <select id="service">
+            <option>Velg tema*</option>
+            <option>Bestilling</option>
+            <option>Support</option>
+          </select>
+
+          <label>Melding:
             <textarea rows="3" placeholder="Melding..."></textarea>
-            <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
-            <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-            <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
-          </div>
+          </label>
+  
+          <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
+          <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
+          <input type="submit" value="Send"> <!-- bevisst: span som knapp, positiv tabindex -->
+          </form>
+        </div>
 
-          <div class="card weird-order">
-            <h4>Mer innhold</h4>
-            <p>
-              <a href="#" tabindex="3">Les mer</a> |
-              <a href="#" tabindex="1">Klikk her</a> |
-              <a href="#" tabindex="2">Trykk her</a>
-            </p>
-            <p>
-              <span class="btn" tabindex="4">Primær handling</span>
-            </p>
-          </div>
+        <div class="card weird-order">
+          <h4>Mer innhold</h4>
+          <p>
+            <a href="#" tabindex="3">Les mer</a> |
+            <a href="#" tabindex="1">Klikk her</a> |
+            <a href="#" tabindex="2">Trykk her</a>
+          </p>
+          <p>
+            <span class="btn" tabindex="4">Primær handling</span>
+          </p>
+        </div>
 
-          <div class="card">
-            <h4>Tabell uten overskrifter</h4>
-            <table border="1" width="100%">
-              <tr><td>1</td><td>2</td><td>3</td></tr>
-              <tr><td>4</td><td>5</td><td>6</td></tr>
-              <tr><td>7</td><td>8</td><td>9</td></tr>
-            </table>
-          </div>
+        <div class="card">
+          <h4>Tabell uten overskrifter</h4>
+          <table>
+            <tr><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td><td>6</td></tr>
+            <tr><td>7</td><td>8</td><td>9</td></tr>
+          </table>
+        </div>
 
-          <div class="card">
-            <h4>Masse lenker med samme tekst</h4>
-            <ul>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-              <li><a href="#">Les mer</a></li>
-            </ul>
-          </div>
-        </section>
-      </main>
+        <div class="card">
+          <h4>Masse lenker med samme tekst</h4>
+          <ul>
+            <li><a href="#">Les mer</a></li>
+            <li><a href="#">Les mer</a></li>
+            <li><a href="#">Les mer</a></li>
+            <li><a href="#">Les mer</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-      <p style="font-size:10px; color:#bfbfbf">© 2025 ACME</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg" alt="facebook ikon for lenke til facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="twitter ikon for lenke til twitter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="instagram ikon for lenke til instagram">
+      <p>© 2025 ACME</p>
     </footer>
 
   </body>
