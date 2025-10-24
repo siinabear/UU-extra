@@ -22,17 +22,21 @@
     </header>
 
     <nav> <!-- bevisst: upresist role og ingen semantisk <nav> -->
-      <a href="#">Hjem</a>
-      <a href="#">Om oss</a>
-      <div class="dropdown">
-        <a href="#">Tjenester</a>
-        <ul>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Utvikling</a></li>
-          <li><a href="#">Konsulent</a></li>
-        </ul>
-      </div>
-      <a href="#">Kontakt</a>
+      <ul>
+        <li><a href="#">Hjem</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li>
+          <details>
+            <summary>Tjenester</summary>
+              <ul>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Utvikling</a></li>
+                <li><a href="#">Konsulent</a></li>
+              </ul>
+          </details>
+        </li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
     </nav>
 
     <section>
